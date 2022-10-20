@@ -9,24 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import vuelo.boleto.projection.RolProjection;
-import vuelo.boleto.repository.RolRepository;
-
+import vuelo.boleto.repository.PersonaRepository;
 /**
  *
  * @author ander
  */
+
 @Service
 @Transactional
-public class RolService {
-
+public class PersonaService {
     @Autowired
-    RolRepository repository;
-
-    @Transactional(readOnly = true)
-    public List<RolProjection> IdNombreRol() {
-        return repository.IdNombreRol();
-    }
-    
-
+    PersonaRepository repository;
 }

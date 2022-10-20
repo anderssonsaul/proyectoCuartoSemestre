@@ -18,7 +18,7 @@ import javax.persistence.Temporal;
  * @author ander
  */
 @Entity
-@Table(name = "rol", schema = "public")
+@Table(name = "persona", schema = "public")
 public class PersonaModel {
 
     private Integer idpersona;
@@ -56,7 +56,7 @@ public class PersonaModel {
         this.idpersona = idpersona;
     }
 
-    @Column(name = "", length = 20)
+    @Column(name = "numeropasaporte", length = 100)
     public String getNumeropasaporte() {
         return numeropasaporte;
     }
@@ -65,7 +65,7 @@ public class PersonaModel {
         this.numeropasaporte = numeropasaporte;
     }
 
-    @Column(name = "", length = 20)
+    @Column(name = "nombre", length = 100)
     public String getNombre() {
         return nombre;
     }
@@ -74,7 +74,7 @@ public class PersonaModel {
         this.nombre = nombre;
     }
 
-    @Column(name = "", length = 20)
+    @Column(name = "apellido", length = 100)
     public String getApellido() {
         return apellido;
     }
@@ -92,7 +92,7 @@ public class PersonaModel {
         this.fechanacimiento = fechanacimiento;
     }
 
-    @Column(name = "nacionalidad", length = )
+    @Column(name = "nacionalidad", length = 50)
     public String getNacionalidad() {
         return nacionalidad;
     }
@@ -101,7 +101,7 @@ public class PersonaModel {
         this.nacionalidad = nacionalidad;
     }
 
-     @Column(name = "segundanacionalidad", length = )
+     @Column(name = "segundanacionalidad", length =50 )
     public String getSegundanacionalidad() {
         return segundanacionalidad;
     }
@@ -110,6 +110,7 @@ public class PersonaModel {
         this.segundanacionalidad = segundanacionalidad;
     }
 
+     @Column(name = "correoelectronico", length =150 )
     public String getCorreoelectronico() {
         return correoelectronico;
     }
@@ -118,6 +119,7 @@ public class PersonaModel {
         this.correoelectronico = correoelectronico;
     }
 
+    @Column(name = "codigoareatelpais", length = 20)
     public String getCodigoareatelpais() {
         return codigoareatelpais;
     }
@@ -126,6 +128,7 @@ public class PersonaModel {
         this.codigoareatelpais = codigoareatelpais;
     }
 
+    @Column(name = "numerotelefono", length =50 )
     public String getNumerotelefono() {
         return numerotelefono;
     }
@@ -134,6 +137,7 @@ public class PersonaModel {
         this.numerotelefono = numerotelefono;
     }
 
+    @Column(name = "numerotelefonoemergencia", length = 50)
     public String getNumerotelefonoemergencia() {
         return numerotelefonoemergencia;
     }
@@ -142,6 +146,7 @@ public class PersonaModel {
         this.numerotelefonoemergencia = numerotelefonoemergencia;
     }
 
+    @Column(name = "direccion", length =500 )
     public String getDireccion() {
         return direccion;
     }
@@ -150,6 +155,7 @@ public class PersonaModel {
         this.direccion = direccion;
     }
 
+    @Column(name = "usuario", length = 20)
     public String getUsuario() {
         return usuario;
     }
@@ -158,6 +164,7 @@ public class PersonaModel {
         this.usuario = usuario;
     }
 
+    @Column(name = "contrasenia", length = 250)
     public String getContrasenia() {
         return contrasenia;
     }
@@ -166,6 +173,7 @@ public class PersonaModel {
         this.contrasenia = contrasenia;
     }
 
+    @Column(name = "preguntaseguridaduno", length = 250)
     public String getPreguntaseguridaduno() {
         return preguntaseguridaduno;
     }
@@ -174,6 +182,7 @@ public class PersonaModel {
         this.preguntaseguridaduno = preguntaseguridaduno;
     }
 
+    @Column(name = "respuestaseguridaduno", length = 250)
     public String getRespuestaseguridaduno() {
         return respuestaseguridaduno;
     }
@@ -182,6 +191,7 @@ public class PersonaModel {
         this.respuestaseguridaduno = respuestaseguridaduno;
     }
 
+    @Column(name = "preguntaseguridaddos", length = 250)
     public String getPreguntaseguridaddos() {
         return preguntaseguridaddos;
     }
@@ -190,6 +200,7 @@ public class PersonaModel {
         this.preguntaseguridaddos = preguntaseguridaddos;
     }
 
+    @Column(name = "respuestaseguridaddos", length = 250)
     public String getRespuestaseguridaddos() {
         return respuestaseguridaddos;
     }
@@ -198,6 +209,7 @@ public class PersonaModel {
         this.respuestaseguridaddos = respuestaseguridaddos;
     }
 
+    @Column(name = "usuariocreacion", length = 20)
     public String getUsuariocreacion() {
         return usuariocreacion;
     }
@@ -216,6 +228,7 @@ public class PersonaModel {
         this.fechacreacion = fechacreacion;
     }
 
+    @Column(name = "usuariomodificacion", length = 20)
     public String getUsuariomodificacion() {
         return usuariomodificacion;
     }
@@ -225,7 +238,7 @@ public class PersonaModel {
     }
 
     @Column(name = "fechamodificacion", length = 19)
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+
     public Date getFechamodificacion() {
         return fechamodificacion;
     }
@@ -234,6 +247,7 @@ public class PersonaModel {
         this.fechamodificacion = fechamodificacion;
     }
 
+    @Column(name = "idestadoregistrotabla")
     public Integer getIdestadoregistrotabla() {
         return idestadoregistrotabla;
     }
