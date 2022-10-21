@@ -35,10 +35,10 @@ public class AsientoPasajeroController {
         return servicio.getAsientoPasajeroxAvion(IdAvion);
     }
     
-    @PostMapping("api/asientopasajero/crearAsientoPasajero")
+   /* @PostMapping("api/asientopasajero/crearAsientoPasajero")
     public boolean crearAsientoPasajero(@RequestBody AsientoPasajeroModel modelo) {
         return servicio.crearAsientoPasajero(modelo);
-    }
+    }*/
     
     @PostMapping("api/asientopasajero/crearAsiento")
     public boolean crearAsiento(@RequestBody AsientoPasajeroDto dto) {

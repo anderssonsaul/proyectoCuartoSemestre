@@ -26,7 +26,8 @@ public class AsientoPasajeroRepository {
     public List<AsientoPasajeroModel> getAsientoPasajeroxAvion(Integer vidAvion) {
         String query = "select idasiento,idavion,idpersona,nombre,codigo,fila,columna,precio,usuariocreacion,fechacreacion,\n"
                 + "usuariomodificacion,fechamodificacion,idclase,idestadoregistrotabla from asiento\n"
-                + "where idavion=:vIdAvion";
+                + "where idavion=:vIdAvion"
+                + " and idestadoregistrotabla=1 ";
         Query q = entityManager.createNativeQuery(query, AsientoPasajeroModel.class);
         q.setParameter("vIdAvion", vidAvion);
         return q.getResultList();
@@ -64,5 +65,7 @@ public class AsientoPasajeroRepository {
         }
         
     }
+    
+  
 
 }
