@@ -17,7 +17,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AsientoPasajeroDto {
-        private Integer idAsiento;
+
+    private Integer idAsiento;
     private Integer idAvion;
     private Integer idPersona;
     private String nombre;
